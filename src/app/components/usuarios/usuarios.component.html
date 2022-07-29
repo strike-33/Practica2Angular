@@ -1,0 +1,26 @@
+<p>usuarios works!</p>
+
+<ul>
+    <li *ngFor="let fruta of ['Banana', 'Pera', 'Naranja']">
+        {{fruta}}
+    </li>
+</ul>
+
+
+
+<p>
+    <label for="nombre">Nombre:</label>
+    <input id="nombre" [(ngModel)]="nombre" />
+</p>
+<p>
+    <label for="apellido">Apellido:</label>
+    <input id="apellido" [(ngModel)]="apellido" />
+</p>
+<p>
+    <label for="Genero">Genero</label>
+    <input id="Genero" [(ngModel)]="Genero" />
+</p>
+
+<button (click)="verDatos()"> MOSTRAR </button>
+
+
