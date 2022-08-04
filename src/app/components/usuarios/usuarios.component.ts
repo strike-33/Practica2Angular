@@ -8,25 +8,20 @@ import { Usuarios } from './usuarios';
   styleUrls: ['./usuarios.component.css']
 })
 export class UsuariosComponent implements OnInit {
- 
-
-
-
-
-
-
-  constructor() { }
+  
   nombre = ""
   apellido = ""
-  Genero = ""
+  genero = ""
   click = 0 
   contador = 0
   alumnostotal:any[] = []
+  
+  constructor() { }
 
 
 
   CrearAlumno(){
-    let alumnos = new Usuarios (this.nombre, this.apellido, this.Genero);
+    let alumnos = new Usuarios (this.nombre, this.apellido, this.genero);
     for(let i=0; this.click<1; i++){
       this.alumnostotal[this.contador] = alumnos;
       console.log(this.alumnostotal[this.contador]);
@@ -35,9 +30,6 @@ export class UsuariosComponent implements OnInit {
       console.log(this.contador)
     }
     this.click=0;
-   
-      
-    
   }
 
   MostrarAlumnos(){
@@ -46,11 +38,6 @@ export class UsuariosComponent implements OnInit {
     }
 
   }
-
-
-
-
-
 
   ngOnInit(): void {
   }
