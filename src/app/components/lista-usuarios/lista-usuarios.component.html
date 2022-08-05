@@ -1,0 +1,32 @@
+<form [formGroup]="personaModel">
+    <div class="form-group">
+        <label for="nombre">Nombre </label>
+        <input type="text" id="nombre" formControlName="nombre" class="form-control">
+        <div class="errors-container" *ngIf="nombrecontrol.invalid && (nombrecontrol.touched || nombrecontrol.dirty)">
+            <p class="error-msg" *ngIf="nombrecontrol.hasError('required')">El campo es obligatorio </p>
+            <p class="error-msg" *ngIf="nombrecontrol.hasError('lenght')">El nombre tiene que tener 3 letras minimo </p>
+        </div>
+        </div>
+    <div class="form-group">
+        <label for="apellido">Apellido</label>
+        <input type="text" id="apellido" formControlName="apellido" class="form-control">
+        <div class="errors-container" *ngIf="apellidocontrol.invalid && (apellidocontrol.touched || apellidocontrol.dirty)">
+            <p class="error-msg" *ngIf="apellidocontrol.hasError('required')">El campo es obligatorio </p>
+            <p class="error-msg" *ngIf="apellidocontrol.hasError('lenght')">El nombre tiene que tener 3 letras minimo </p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" id="email" formControlName="email" class="form-control">
+        <div class="errors-container" *ngIf="emailcontrol.invalid && (emailcontrol.touched || emailcontrol.dirty)">
+            <p class="error-msg" *ngIf="emailcontrol.hasError('required')">El campo es obligatorio </p>
+            <p class="error-msg" *ngIf="emailcontrol.hasError('email')">El campo debe ser un email </p>
+        </div>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary btn-sm" [disabled]="personaModel.invalid">Guardar</button>
+    </div>
+ 
+</form>
+
+<pre>{{personaModel.value | json}}</pre>
