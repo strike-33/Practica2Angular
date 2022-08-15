@@ -1,0 +1,15 @@
+footer {
+    width: 100%; }
+    footer .container h1 {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      margin-top: 40px; }
+    footer .container hr {
+      width: 125px;
+      height: 2px; }
+    footer .container i {
+      width: 30px; }
+    footer .blanco {
+      color: white;
+      margin-top: 15px; }
