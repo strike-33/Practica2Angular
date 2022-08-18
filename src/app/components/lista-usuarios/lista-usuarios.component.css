@@ -23,11 +23,9 @@ label {
 }
 input,
 textarea {
-  border: 1px solid #ccc;
-  border-radius: 5px;
   padding: 8px 16px;
   font-size: 1rem;
-  margin-bottom: 16px;
+  
 }
 
 textarea {
