@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validator, Validators} from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { Usuarios } from './usuarios';
 
 
 @Component({
@@ -10,7 +11,17 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
   styleUrls: ['./lista-usuarios.component.css']
 })
 
+
+
 export class ListaUsuariosComponent implements OnInit {  
+
+  nombreusr = ""
+  apellidousr = ""
+  emailusr = ""
+  click = 0 
+  contador = 0
+  alumnostotal:any[] = []
+
   personaModel= new FormGroup({
   nombre: new FormControl("", [Validators.required, Validators.minLength(2)]),
   apellido: new FormControl("", [Validators.required, Validators.minLength(2)]),
@@ -26,7 +37,18 @@ export class ListaUsuariosComponent implements OnInit {
   get emailcontrol(): FormControl{
     return this.personaModel.get('email') as FormControl;
   }
-
+  
+  CrearAlumno(){
+    let alumnos = new Usuarios (this.nombreusr, this.apellidousr, this.emailusr);
+    for(let i=0; this.click<1; i++){
+      this.alumnostotal[this.contador] = alumnos;
+      console.log(this.alumnostotal[this.contador]);
+      this.click =1
+      this.contador ++ 
+      console.log(this.contador)
+    }
+    this.click=0;
+  }
 
   ngOnInit(): void {
   }
