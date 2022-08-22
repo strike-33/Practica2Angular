@@ -26,11 +26,8 @@
     <div class="form-group">
         <button (click)="CrearAlumno()" class="btn btn-primary btn-sm" [disabled]="personaModel.invalid">Guardar</button>
     </div>
- 
 </form>
-
 <pre>{{personaModel.value | json}}</pre>
-
 <div>
     <h3>La cantidad de alumnos es de : {{estudiantesTotal | async}}</h3>
 </div>

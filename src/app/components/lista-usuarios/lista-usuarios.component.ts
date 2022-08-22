@@ -4,14 +4,11 @@ import { MatCardModule } from '@angular/material/card';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { Usuarios } from './usuarios';
 
-
 @Component({
   selector: 'app-lista-usuarios',
   templateUrl: './lista-usuarios.component.html',
   styleUrls: ['./lista-usuarios.component.css']
 })
-
-
 
 export class ListaUsuariosComponent implements OnInit {  
 
@@ -24,7 +21,7 @@ export class ListaUsuariosComponent implements OnInit {
   estudiantesTotal = new Promise((resolve, reject)=>{
     setTimeout(()=> {
       resolve(this.alumnostotal.length);
-    }, 5000)
+    }, 15000)
   }) 
 
   personaModel= new FormGroup({
@@ -42,7 +39,7 @@ export class ListaUsuariosComponent implements OnInit {
   get emailcontrol(): FormControl{
     return this.personaModel.get('email') as FormControl;
   }
-  
+
   CrearAlumno(){
     let alumnos = new Usuarios (this.nombreusr, this.apellidousr, this.emailusr);
     for(let i=0; this.click<1; i++){
