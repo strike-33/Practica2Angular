@@ -31,6 +31,9 @@
 
 <pre>{{personaModel.value | json}}</pre>
 
+<div>
+    <h3>La cantidad de alumnos es de : {{estudiantesTotal | async}}</h3>
+</div>
 <div class="row">
     <div class="col">
         <table class="table">
@@ -42,10 +45,10 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>{{}}</td>
-                    <td>{{}}</td>
-                    <td>{{}}</td>
+                <tr *ngFor="let alumnos from alumnostotal">
+                    <td>{{alumnos.nombre}</td>
+                    <td>{{alumnos.apellido}}</td>
+                    <td>{{alumnos.email}}</td>
                 </tr>
             </tbody>
         </table>

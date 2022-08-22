@@ -20,7 +20,12 @@ export class ListaUsuariosComponent implements OnInit {
   emailusr = ""
   click = 0 
   contador = 0
-  alumnostotal:any[] = []
+  alumnostotal:Usuarios[] = []
+  estudiantesTotal = new Promise((resolve, reject)=>{
+    setTimeout(()=> {
+      resolve(this.alumnostotal.length);
+    }, 5000)
+  }) 
 
   personaModel= new FormGroup({
   nombre: new FormControl("", [Validators.required, Validators.minLength(2)]),
