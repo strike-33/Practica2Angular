@@ -47,7 +47,8 @@ export class ListaUsuariosComponent implements OnInit {
     this.selectedUsuario = new Usuarios;
   }
 
-Eliminar(){
+Eliminar(alumnos: Usuarios){
+  this.selectedUsuario = alumnos;
   if(confirm('Estas seguro que queres eliminarlo?')){
     this.alumnostotal= this.alumnostotal.filter(x => x != this.selectedUsuario);
     this.selectedUsuario = new Usuarios;
