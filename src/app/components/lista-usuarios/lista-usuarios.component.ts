@@ -12,11 +12,7 @@ import { Usuarios } from './usuarios';
 
 
 export class ListaUsuariosComponent implements OnInit {  
-  nombreusr = ""
-  apellidousr = ""
-  emailusr = ""
-  click = 0 
-  id = 0
+
   alumnostotal:Usuarios[] = []
   estudiantesTotal = new Promise((resolve, reject)=>{
     setTimeout(()=> {
@@ -42,23 +38,25 @@ export class ListaUsuariosComponent implements OnInit {
     return this.personaModel.get('email') as FormControl;
   }
 
-  CrearAlumno(){
-    this.id ++
-    let alumnos = new Usuarios (this.nombreusr, this.apellidousr, this.emailusr, this.id);
-    for(let i=0; this.click<1; i++){
-      this.alumnostotal[this.id -1] = alumnos;
-      console.log(this.alumnostotal[this.id -1]);
-      this.click =1
-      console.log(this.id)
+  
+  CrearAlumno2(){
+    if(this.selectedUsuario.id === 0){
+    this.selectedUsuario.id = this.alumnostotal.length + 1;
+    this.alumnostotal.push(this.selectedUsuario);
     }
-    this.click=0;
+    this.selectedUsuario = new Usuarios;
   }
+
+Eliminar(){
+  if(confirm('Estas seguro que queres eliminarlo?')){
+    this.alumnostotal= this.alumnostotal.filter(x => x != this.selectedUsuario);
+    this.selectedUsuario = new Usuarios;
+  }
+}
 
 
   EditarUsuario(alumnos: Usuarios){
-  if(alumnos.id != 0 ){
-    console.log(alumnos.id);
-  }
+  this.selectedUsuario = alumnos;
   }
 
 
