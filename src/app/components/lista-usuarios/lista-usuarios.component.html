@@ -39,13 +39,17 @@
                     <th>Nombre</th>
                     <th>Apellido</th>
                     <th>Email</th>
+                    <th>Editar</th>
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let alumnos from alumnostotal">
-                    <td>{{alumnos.nombre}</td>
+                <tr *ngFor="let alumnos of alumnostotal">
+                    <td>{{alumnos.nombre}}</td>
                     <td>{{alumnos.apellido}}</td>
                     <td>{{alumnos.email}}</td>
+                    <td>
+                        <button (click)="EditarUsuario(alumnos)" class="btn btn-primary btn-sm" [disabled]="personaModel.invalid">Editar</button>
+                    </td>
                 </tr>
             </tbody>
         </table>

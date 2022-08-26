@@ -10,19 +10,21 @@ import { Usuarios } from './usuarios';
   styleUrls: ['./lista-usuarios.component.css']
 })
 
-export class ListaUsuariosComponent implements OnInit {  
 
+export class ListaUsuariosComponent implements OnInit {  
   nombreusr = ""
   apellidousr = ""
   emailusr = ""
   click = 0 
-  contador = 0
+  id = 0
   alumnostotal:Usuarios[] = []
   estudiantesTotal = new Promise((resolve, reject)=>{
     setTimeout(()=> {
       resolve(this.alumnostotal.length);
     }, 15000)
   }) 
+
+  selectedUsuario : Usuarios = new Usuarios();
 
   personaModel= new FormGroup({
   nombre: new FormControl("", [Validators.required, Validators.minLength(2)]),
@@ -41,16 +43,24 @@ export class ListaUsuariosComponent implements OnInit {
   }
 
   CrearAlumno(){
-    let alumnos = new Usuarios (this.nombreusr, this.apellidousr, this.emailusr);
+    this.id ++
+    let alumnos = new Usuarios (this.nombreusr, this.apellidousr, this.emailusr, this.id);
     for(let i=0; this.click<1; i++){
-      this.alumnostotal[this.contador] = alumnos;
-      console.log(this.alumnostotal[this.contador]);
+      this.alumnostotal[this.id -1] = alumnos;
+      console.log(this.alumnostotal[this.id -1]);
       this.click =1
-      this.contador ++ 
-      console.log(this.contador)
+      console.log(this.id)
     }
     this.click=0;
   }
+
+
+  EditarUsuario(alumnos: Usuarios){
+  if(alumnos.id != 0 ){
+    console.log(alumnos.id);
+  }
+  }
+
 
   ngOnInit(): void {
   }
