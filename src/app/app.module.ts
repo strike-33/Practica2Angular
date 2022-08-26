@@ -8,6 +8,15 @@ import { ListaUsuariosComponent } from './components/lista-usuarios/lista-usuari
 import { NabvarComponent } from './components/nabvar/nabvar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule, Routes } from '@angular/router';
+
+const appRoutes: Routes=[
+  {path: 'inicio', component:CompanyComponent},
+  {path: 'Productos', component:CompanyComponent},
+  {path: 'Contacto', component:CompanyComponent},
+  {path: '**', component:PageNotFoundComponent}
+
+]
 
 @NgModule({
   declarations: [
@@ -22,7 +31,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    ModuloMaterialModule
+    ModuloMaterialModule,
+    RouterModule.forRoot( appRoutes, {enableTracing: true})
 
   ],
   providers: [],
