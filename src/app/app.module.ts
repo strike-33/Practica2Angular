@@ -9,21 +9,16 @@ import { NabvarComponent } from './components/nabvar/nabvar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
+import { HomepageBodyComponent } from './components/homepage-body/homepage-body.component';
 
-const appRoutes: Routes=[
-  {path: 'inicio', component:CompanyComponent},
-  {path: 'Productos', component:CompanyComponent},
-  {path: 'Contacto', component:CompanyComponent},
-  {path: '**', component:PageNotFoundComponent}
-
-]
 
 @NgModule({
   declarations: [
     AppComponent,
     ListaUsuariosComponent,
     NabvarComponent,
-    FooterComponent
+    FooterComponent,
+    HomepageBodyComponent
   ],
   imports: [
     BrowserModule,
@@ -31,8 +26,7 @@ const appRoutes: Routes=[
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    ModuloMaterialModule,
-    RouterModule.forRoot( appRoutes, {enableTracing: true})
+    ModuloMaterialModule
 
   ],
   providers: [],
