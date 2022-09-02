@@ -11,6 +11,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 import { HomepageBodyComponent } from './components/homepage-body/homepage-body.component';
 import  {app_routing} from './app-routing.module'
+import { HttpClientModule } from '@angular/common/http';
+import { ApiRestComponent } from './components/api-rest/api-rest.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import  {app_routing} from './app-routing.module'
     ListaUsuariosComponent,
     NabvarComponent,
     FooterComponent,
-    HomepageBodyComponent
+    HomepageBodyComponent,
+    ApiRestComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,8 @@ import  {app_routing} from './app-routing.module'
     ReactiveFormsModule,
     BrowserAnimationsModule,
     ModuloMaterialModule,
-    app_routing
+    app_routing,
+    HttpClientModule
 
   ],
   providers: [],
