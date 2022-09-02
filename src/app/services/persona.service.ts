@@ -5,7 +5,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class PersonaService {
-  _url = 'https://api.covidtracking.com'
+  _url = 'https://63123a8cb466aa9b0386ab43.mockapi.io/Ususarios'
 
   constructor(private http: HttpClient) 
   {}
