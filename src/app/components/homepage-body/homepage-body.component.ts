@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./homepage-body.component.css']
 })
 export class HomepageBodyComponent implements OnInit {
+    banner:string = "../images/banner2.jpg";
+
+
 
   constructor() { }
 
