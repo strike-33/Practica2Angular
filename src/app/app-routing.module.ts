@@ -15,6 +15,10 @@ const router: Routes = [{
 {
   path:'metapc/Api-Rest',
   component:ApiRestComponent
+},
+{
+  path: 'metapc/productos',
+  loadChildren: () => import('./productos/productos.module').then(m => m.ProductosModule)
 }
 ];
 
