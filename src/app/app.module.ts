@@ -20,6 +20,8 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { provideFunctions,getFunctions } from '@angular/fire/functions';
 import { provideStorage,getStorage } from '@angular/fire/storage';
+import { LoginComponent } from './components/login/login.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     NabvarComponent,
     FooterComponent,
     HomepageBodyComponent,
-    ApiRestComponent
+    ApiRestComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +47,9 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
     provideFunctions(() => getFunctions()),
-    provideStorage(() => getStorage())
+    provideStorage(() => getStorage()),
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
 
   ],
   providers: [
