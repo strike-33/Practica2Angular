@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomepageBodyComponent } from './components/homepage-body/homepage-body.component';
 import { ListaUsuariosComponent } from './components/lista-usuarios/lista-usuarios.component';
 import  {ApiRestComponent} from './components/api-rest/api-rest.component';
-import{LoginComponent} from './components/login/login.component';
+import {LoginComponent} from './components/login/login.component';
 
 const router: Routes = [{
   path:'metapc/Home',
@@ -15,16 +15,17 @@ const router: Routes = [{
 },
 {
   path:'metapc/Api-Rest',
-  component:ApiRestComponent
+  component:LoginComponent
+},
+{
+  path:'metapc/login',
+  component: ApiRestComponent
 },
 {
   path: 'metapc/productos',
   loadChildren: () => import('./productos/productos.module').then(m => m.ProductosModule)
-},
-{
-  path:'metapc/Login',
-  component:LoginComponent
 }
+
 ];
 
 @NgModule({

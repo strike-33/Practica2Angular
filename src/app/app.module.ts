@@ -22,6 +22,7 @@ import { provideFunctions,getFunctions } from '@angular/fire/functions';
 import { provideStorage,getStorage } from '@angular/fire/storage';
 import { LoginComponent } from './components/login/login.component';
 import { ToastrModule } from 'ngx-toastr';
+import{AngularFireModule } from '@angular/fire/compat'
 
 @NgModule({
   declarations: [
@@ -42,12 +43,7 @@ import { ToastrModule } from 'ngx-toastr';
     ModuloMaterialModule,
     app_routing,
     HttpClientModule,
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideAnalytics(() => getAnalytics()),
-    provideAuth(() => getAuth()),
-    provideFirestore(() => getFirestore()),
-    provideFunctions(() => getFunctions()),
-    provideStorage(() => getStorage()),
+    AngularFireModule.initializeApp(environment.firebaseConfig),
     BrowserAnimationsModule,
     ToastrModule.forRoot()
 
