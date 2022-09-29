@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "coderhouseproyecto-21278": {
+      "hosting": {
+        "prueba2": [
+          "coderhouseproyecto-21278"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "coderhouseproyecto-21278"
+  }
+}

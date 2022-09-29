@@ -96,6 +96,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "prueba2:build:production",
+            "firebaseProject": "coderhouseproyecto-21278",
+            "firebaseHostingSite": "coderhouseproyecto-21278"
+          }
         }
       }
     }
