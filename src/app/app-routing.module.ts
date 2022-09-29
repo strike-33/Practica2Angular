@@ -15,11 +15,11 @@ const router: Routes = [{
 },
 {
   path:'metapc/Api-Rest',
-  component:LoginComponent
+  component:ApiRestComponent
 },
 {
   path:'metapc/login',
-  component: ApiRestComponent
+  component: LoginComponent
 },
 {
   path: 'metapc/productos',
