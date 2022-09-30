@@ -22,7 +22,9 @@ import { provideFunctions,getFunctions } from '@angular/fire/functions';
 import { provideStorage,getStorage } from '@angular/fire/storage';
 import { LoginComponent } from './components/login/login.component';
 import { ToastrModule } from 'ngx-toastr';
-import{AngularFireModule } from '@angular/fire/compat'
+import{AngularFireModule } from '@angular/fire/compat';
+import { RegistrarUsuarioComponent } from './components/registrar-usuario/registrar-usuario.component'
+
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import{AngularFireModule } from '@angular/fire/compat'
     FooterComponent,
     HomepageBodyComponent,
     ApiRestComponent,
-    LoginComponent
+    LoginComponent,
+    RegistrarUsuarioComponent
   ],
   imports: [
     BrowserModule,
