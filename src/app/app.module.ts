@@ -23,7 +23,9 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
 import { LoginComponent } from './components/login/login.component';
 import { ToastrModule } from 'ngx-toastr';
 import{AngularFireModule } from '@angular/fire/compat';
-import { RegistrarUsuarioComponent } from './components/registrar-usuario/registrar-usuario.component'
+import { RegistrarUsuarioComponent } from './components/registrar-usuario/registrar-usuario.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { RecuperarPasswordComponent } from './components/recuperar-password/recuperar-password.component'
 
 
 @NgModule({
@@ -35,7 +37,9 @@ import { RegistrarUsuarioComponent } from './components/registrar-usuario/regist
     HomepageBodyComponent,
     ApiRestComponent,
     LoginComponent,
-    RegistrarUsuarioComponent
+    RegistrarUsuarioComponent,
+    DashboardComponent,
+    RecuperarPasswordComponent
   ],
   imports: [
     BrowserModule,
