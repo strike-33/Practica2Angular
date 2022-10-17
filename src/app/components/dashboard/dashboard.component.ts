@@ -19,13 +19,13 @@ export class DashboardComponent implements OnInit {
         this.dataUser = user;
         console.log(user)
       } else {
-        this.router.navigate(['/login']);
+        this.router.navigate(['/metapc/login']);
       }
     })
   }
 
   logOut() {
-    this.afAuth.signOut().then(() => this.router.navigate(['/login']));
+    this.afAuth.signOut().then(() => this.router.navigate(['/metapc/login']));
   }
 
 }

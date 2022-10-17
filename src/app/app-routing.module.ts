@@ -5,6 +5,7 @@ import { ListaUsuariosComponent } from './components/lista-usuarios/lista-usuari
 import  {ApiRestComponent} from './components/api-rest/api-rest.component';
 import {LoginComponent} from './components/login/login.component';
 import { RegistrarUsuarioComponent } from './components/registrar-usuario/registrar-usuario.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 const router: Routes = [{
   path:'metapc/Home',
@@ -26,6 +27,10 @@ const router: Routes = [{
 path:'metapc/register',
 component: RegistrarUsuarioComponent
 },
+{
+  path:'metapc/dashboard',
+  component: DashboardComponent
+  },
 {
   path: 'metapc/productos',
   loadChildren: () => import('./productos/productos.module').then(m => m.ProductosModule)
